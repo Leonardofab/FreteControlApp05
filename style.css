@@ -1,0 +1,667 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+
+    background:#eef2f7;
+    color:#333;
+
+}
+
+header{
+
+    background:#1565c0;
+    color:#fff;
+    padding:24px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+}
+
+header h1{
+
+    font-size:30px;
+
+}
+
+header p{
+
+    margin-top:5px;
+    opacity:.9;
+
+}
+
+/* ===========================
+RESUMO
+=========================== */
+
+.resumo{
+
+    display:flex;
+    gap:15px;
+    margin:20px;
+
+}
+
+.box{
+
+    flex:1;
+    background:#fff;
+    border-radius:14px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+}
+
+.box span{
+
+    color:#666;
+    font-size:14px;
+
+}
+
+.box h2{
+
+    margin-top:10px;
+    color:#1565c0;
+    font-size:30px;
+
+}
+
+/* ===========================
+NOVO FRETE
+=========================== */
+
+.novo{
+
+    background:#fff;
+    margin:20px;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+}
+
+.novo h2{
+
+    margin-bottom:18px;
+
+}
+
+input,
+textarea{
+
+    width:100%;
+    padding:13px;
+    border:1px solid #d9d9d9;
+    border-radius:10px;
+    margin-bottom:12px;
+    font-size:15px;
+    outline:none;
+
+}
+
+input:focus,
+textarea:focus{
+
+    border-color:#1565c0;
+
+}
+
+textarea{
+
+    resize:vertical;
+    min-height:90px;
+
+}
+
+/* ===========================
+FOTO
+=========================== */
+
+#fotoCamera,
+#fotoGaleria{
+
+    display:none;
+
+}
+
+.botoesFoto{
+
+    display:flex;
+    gap:12px;
+    margin-bottom:15px;
+
+}
+
+.btnFoto,
+.btnFotoAlt{
+
+    flex:1;
+    text-align:center;
+    padding:14px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+
+}
+
+.btnFoto{
+
+    background:#1565c0;
+    color:#fff;
+
+}
+
+.btnFotoAlt{
+
+    background:#fff;
+    color:#1565c0;
+    border:2px solid #1565c0;
+
+}
+
+#previewFoto{
+
+    display:block;
+    margin:auto;
+    max-width:100%;
+    max-height:550px;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    border-radius:16px;
+    margin-bottom:15px;
+
+}
+
+/* ===========================
+DOIS CAMPOS
+=========================== */
+
+.linhaDupla{
+
+    display:flex;
+    gap:12px;
+
+}
+
+.linhaDupla input{
+
+    flex:1;
+
+}
+
+/* ===========================
+BOTÃO SALVAR
+=========================== */
+
+#btnNovo{
+
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#1565c0;
+    color:#fff;
+    font-size:17px;
+    cursor:pointer;
+    transition:.25s;
+
+}
+
+#btnNovo:hover{
+
+    background:#0d47a1;
+
+}
+
+#btnCancelarEdicao{
+
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#757575;
+    color:#fff;
+    font-size:15px;
+    cursor:pointer;
+    margin-top:10px;
+    transition:.25s;
+
+}
+
+#btnCancelarEdicao:hover{
+
+    background:#5c5c5c;
+
+}
+
+/* ===========================
+LISTA
+=========================== */
+
+.lista{
+
+    margin:20px;
+
+}
+
+.lista h2{
+
+    margin-bottom:18px;
+
+}
+
+.vazio{
+
+    background:#fff;
+    border-radius:14px;
+    text-align:center;
+    padding:40px;
+    color:#777;
+
+}
+
+.btnAbrirFretes{
+
+    width:100%;
+    background:#1565c0;
+    color:#fff;
+    border:none;
+    padding:18px;
+    border-radius:14px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.25s;
+
+}
+
+.btnAbrirFretes:hover{
+
+    background:#0d47a1;
+
+}
+
+/* ===========================
+TELA FRETES CADASTRADOS
+=========================== */
+
+.telaFretes{
+
+    position:fixed;
+    inset:0;
+    background:#eef2f7;
+    z-index:500;
+    display:none;
+    overflow-y:auto;
+
+}
+
+.telaFretesHeader{
+
+    background:#1565c0;
+    color:#fff;
+    padding:18px 20px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    position:sticky;
+    top:0;
+    z-index:10;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+}
+
+.telaFretesHeader h2{
+
+    font-size:19px;
+
+}
+
+.btnVoltar{
+
+    background:transparent;
+    border:2px solid #fff;
+    color:#fff;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:14px;
+    white-space:nowrap;
+
+}
+
+.btnVoltar:hover{
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.listaSemanas{
+
+    padding:20px;
+
+}
+
+/* ===========================
+CARD DE SEMANA
+=========================== */
+
+.semanaCard{
+
+    background:#fff;
+    border-radius:14px;
+    margin-bottom:16px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+}
+
+.semanaHeader{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    cursor:pointer;
+
+}
+
+.semanaHeader h3{
+
+    color:#1565c0;
+    font-size:18px;
+    margin-bottom:4px;
+
+}
+
+.semanaHeader span{
+
+    color:#666;
+    font-size:14px;
+
+}
+
+.semanaSeta{
+
+    font-size:14px;
+    color:#1565c0;
+    margin-left:10px;
+
+}
+
+.semanaBody{
+
+    padding:0 16px 16px;
+    border-top:1px solid #eee;
+
+}
+
+.botoesSemana{
+
+    display:flex;
+    gap:10px;
+    margin:14px 0;
+
+}
+
+.btnPdfSemana,
+.btnExcelSemana{
+
+    flex:1;
+    color:#fff;
+    border:none;
+    padding:13px 6px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:13px;
+    font-weight:bold;
+
+}
+
+.btnPdfSemana{
+
+    background:#ef6c00;
+
+}
+
+.btnPdfSemana:hover{
+
+    background:#d84315;
+
+}
+
+.btnExcelSemana{
+
+    background:#2e7d32;
+
+}
+
+.btnExcelSemana:hover{
+
+    background:#1b5e20;
+
+}
+
+/* ===========================
+CARD
+=========================== */
+
+.card{
+
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+    margin-bottom:22px;
+    box-shadow:0 4px 12px rgba(0,0,0,.10);
+
+}
+
+.cardFoto{
+
+    padding:12px;
+
+}
+
+.fotoContainer{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#efefef;
+    border-radius:14px;
+    overflow:hidden;
+
+}
+
+.fotoCard{
+
+    display:block;
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:550px;
+    object-fit:contain;
+    cursor:pointer;
+
+}
+
+.cardInfo{
+
+    padding:16px;
+
+}
+
+.cardInfo h3{
+
+    color:#1565c0;
+    margin-bottom:12px;
+    font-size:22px;
+
+}
+
+.cardInfo p{
+
+    margin:8px 0;
+    line-height:1.6;
+    font-size:16px;
+
+}
+
+.valor{
+
+    color:#0a8f3d;
+    font-size:22px;
+    font-weight:bold;
+
+}
+
+.obs{
+
+    background:#f5f5f5;
+    border-radius:10px;
+    padding:12px;
+    margin-top:12px;
+
+    white-space:pre-wrap;
+    word-break:break-word;
+    overflow-wrap:anywhere;
+
+}
+
+.acoes{
+
+    padding:15px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:10px;
+    border-top:1px solid #e5e5e5;
+
+}
+
+.btnPdfFrete{
+
+    background:#1565c0;
+    color:#fff;
+    border:none;
+    padding:11px 20px;
+    border-radius:10px;
+    cursor:pointer;
+
+}
+
+.btnPdfFrete:hover{
+
+    background:#0d47a1;
+
+}
+
+.btnEditar{
+
+    background:#ef6c00;
+    color:#fff;
+    border:none;
+    padding:11px 20px;
+    border-radius:10px;
+    cursor:pointer;
+
+}
+
+.btnEditar:hover{
+
+    background:#e65100;
+
+}
+
+.btnExcluir{
+
+    background:#d32f2f;
+    color:#fff;
+    border:none;
+    padding:11px 20px;
+    border-radius:10px;
+    cursor:pointer;
+
+}
+
+.btnExcluir:hover{
+
+    background:#b71c1c;
+
+}
+
+/* ===========================
+MODAL FOTO
+=========================== */
+
+.modalFoto{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.94);
+
+    z-index:9999;
+
+}
+
+.modalFoto img{
+
+    max-width:95%;
+
+    max-height:95%;
+
+    border-radius:16px;
+
+}
+
+#fecharModal{
+
+    position:absolute;
+
+    top:20px;
+
+    right:30px;
+
+    color:#fff;
+
+    font-size:45px;
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+CELULAR
+=========================== */
+
+@media(max-width:700px){
+
+    .resumo{
+
+        flex-direction:column;
+
+    }
+
+    .linhaDupla{
+
+        flex-direction:row;
+
+    }
+
+}

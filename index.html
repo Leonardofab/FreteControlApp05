@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FreteControl</title>
+
+    <meta name="theme-color"
+          content="#1565c0">
+
+    <meta name="mobile-web-app-capable"
+          content="yes">
+
+    <meta name="apple-mobile-web-app-capable"
+          content="yes">
+
+    <meta name="apple-mobile-web-app-status-bar-style"
+          content="default">
+
+    <link rel="manifest"
+          href="manifest.json">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🚚 FreteControl</h1>
+
+    <p>Controle de Fretes</p>
+
+</header>
+
+<section class="resumo">
+
+    <div class="box">
+
+        <span>Total da Semana</span>
+
+        <h2 id="totalSemana">
+
+            R$ 0,00
+
+        </h2>
+
+    </div>
+
+    <div class="box">
+
+        <span>Fretes</span>
+
+        <h2 id="totalFretes">
+
+            0
+
+        </h2>
+
+    </div>
+
+</section>
+
+<section class="novo">
+
+    <h2 id="tituloForm">Novo Frete</h2>
+
+    <div class="foto-container">
+
+        <img
+            id="previewFoto"
+            src=""
+            style="display:none;"
+            alt="Prévia">
+
+        <div class="botoesFoto">
+
+            <label
+                for="fotoCamera"
+                class="btnFoto">
+
+                📷 Tirar Foto
+
+            </label>
+
+            <label
+                for="fotoGaleria"
+                class="btnFotoAlt">
+
+                🖼 Galeria
+
+            </label>
+
+        </div>
+
+        <input
+            id="fotoCamera"
+            type="file"
+            accept="image/*"
+            capture="environment">
+
+        <input
+            id="fotoGaleria"
+            type="file"
+            accept="image/*">
+
+    </div>
+
+    <input
+
+        id="os"
+
+        placeholder="Número da O.S.">
+
+    <div class="linhaDupla">
+
+        <input
+
+            id="solicitante"
+
+            placeholder="Solicitante">
+
+        <input
+
+            id="responsavel"
+
+            placeholder="Responsável">
+
+    </div>
+
+    <textarea
+
+        id="descricao"
+
+        placeholder="Descrição do Serviço"></textarea>
+
+    <input
+
+        id="valor"
+
+        type="number"
+
+        step="0.01"
+
+        placeholder="Valor do Frete">
+
+    <textarea
+
+        id="obs"
+
+        placeholder="Observações"></textarea>
+
+    <button
+
+        id="btnNovo">
+
+        💾 Salvar Frete
+
+    </button>
+
+    <button
+
+        id="btnCancelarEdicao"
+
+        style="display:none;">
+
+        ✖ Cancelar Edição
+
+    </button>
+
+</section>
+
+<section class="lista">
+
+    <button
+
+        id="btnAbrirFretes"
+
+        class="btnAbrirFretes">
+
+        📁 Fretes Cadastrados
+
+    </button>
+
+</section>
+
+<div
+
+    id="modalFoto"
+
+    class="modalFoto">
+
+    <span
+
+        id="fecharModal">
+
+        &times;
+
+    </span>
+
+    <img
+
+        id="imagemModal"
+
+        alt="Foto">
+
+</div>
+
+<div
+
+    id="telaFretes"
+
+    class="telaFretes">
+
+    <div class="telaFretesHeader">
+
+        <button
+
+            id="btnVoltarFretes"
+
+            class="btnVoltar">
+
+            ← Voltar
+
+        </button>
+
+        <h2>Fretes Cadastrados</h2>
+
+    </div>
+
+    <div
+
+        id="listaSemanas"
+
+        class="listaSemanas">
+
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+<script src="database.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
